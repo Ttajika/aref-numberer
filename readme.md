@@ -46,6 +46,7 @@ The number appears only when referenced as
 
 #### Parameters
 This function requires a label in its first argument. The type of label should be either _str_ or _label_.  
+
 ```typst
 aeq(
   [str][label],
@@ -54,6 +55,7 @@ aeq(
   [content]
 ) -> [content]
 ```
+
 ##### tag [bool]
 Sets a tag instead of equation number. 
 
@@ -65,6 +67,7 @@ Specifies the name of the tag. If none is provided, the tag's name will be the f
 Default: none
 
 example: 
+
 ```typst
 #aeq(<ic>,name:"IC")[
 $
@@ -90,6 +93,7 @@ This function is used to reference multiple labels.
 
 
 #### example
+
 ```typst
 #figure(caption:"")[#table([],[])]<b>
 #figure(caption:"")[#table([],[])]<c>
