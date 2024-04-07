@@ -9,6 +9,7 @@ _This is not an official package._
 
 1. Download the package:
    Download and store the folder in {data-dir}/typst/packages/local
+   
    {data-dir} is
     * $XDG_DATA_HOME or ~/.local/share on Linux
     * ~/Library/Application Support on macOS
