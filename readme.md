@@ -46,7 +46,7 @@ The number appears only when referenced as
 
 #### Parameters
 This function requires a label in its first argument. The type of label should be either _str_ or _label_.  
-```
+```typst
 aeq(
   [str][label],
   name: [str]
