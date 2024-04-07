@@ -1,4 +1,4 @@
-# aref-numberer
+# auto-ref-numbery
 
 A package for numbering equations only when they are referred to.
 
@@ -6,7 +6,7 @@ A package for numbering equations only when they are referred to.
 
 1. Import the package:
     ```typst
-    #import "@preview/aref-numberer:0.0.1: *"
+    #import "@preview/auto-ref-numbery:0.0.1: *"
     ```
 1. Apply the reference rule: 
     ```typst

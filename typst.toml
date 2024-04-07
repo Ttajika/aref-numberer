@@ -1,5 +1,5 @@
 [package]
-name = "aref-numberer"
+name = "auto-ref-numbery"
 version = "0.0.1"
 entrypoint = "lib.typ"
 authors = ["Tomoya Tajika"]
