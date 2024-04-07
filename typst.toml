@@ -1,5 +1,5 @@
 [package]
-name = "ref-numberer"
+name = "aref-numberer"
 version = "0.0.1"
 entrypoint = "lib.typ"
 authors = ["Tomoya Tajika"]
