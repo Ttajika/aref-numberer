@@ -52,15 +52,10 @@ else {return it}
  }
 
 
-#let heading_supplement(it, supplement,thenumber,lang:"en") ={
-   if lang == "jp" and supplement in trans.at("jp").keys() {
-     return thenumber + trans.at("jp").at(supplement) 
-   }
-   else {return it}
- }
+
 
 //modify reference 
-#let eq_refstyle(it,lang:"en") = {
+#let eq_refstyle(it,lang:"en",dic:(en:(:))) = {
   return  {
   let lbl = it.target
   let eq = math.equation
@@ -76,9 +71,9 @@ else {return it}
       ) ]
   } else if el != none and el.has("counter") {
       let c_eq = el.counter
-     if el.supplement.text in trans.at(lang).keys(){
+     if el.supplement.text in dic.at(lang).keys(){
     link(lbl)[
-     #trans.at(lang).at(el.supplement.text) #numbering(
+     #dic.at(lang).at(el.supplement.text) #numbering(
       el.numbering,
       ..c_eq.at(el.location())
     )]
@@ -88,7 +83,7 @@ else {return it}
         el.numbering,
         ..counter(heading).at(el.location())
       )
-    link(lbl)[#heading_supplement(it, it.element.supplement.text, thenumber,lang:lang)
+    link(lbl)[#heading_supplement(it, it.element.supplement.text, thenumber,lang:lang,dic:dic)
     ]
   }
     else {it}
