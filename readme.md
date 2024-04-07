@@ -15,7 +15,7 @@ _This is not an official package._
     * ~/Library/Application Support on macOS
     * %APPDATA% on Windows
 1. Import the package
-   ```
+   ```typst
    #import "@local/auto-ref-numbery-main:0.0.1": *
    ```
 1. Apply the reference rule: 
