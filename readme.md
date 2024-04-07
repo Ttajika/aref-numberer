@@ -8,7 +8,7 @@ _This is not an official package._
 
 
 1. Download the package:
-   Download and store the folder in {data-dir}/typst/packages/local
+   Download and store folder "0.0.1" in {data-dir}/typst/packages/local/auto-ref-numbery
    
    {data-dir} is
     * $XDG_DATA_HOME or ~/.local/share on Linux
@@ -16,7 +16,7 @@ _This is not an official package._
     * %APPDATA% on Windows
 1. Import the package
    ```typst
-   #import "@local/auto-ref-numbery-main:0.0.1": *
+   #import "@local/auto-ref-numbery:0.0.1": *
    ```
 1. Apply the reference rule: 
     ```typst
