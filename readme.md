@@ -2,10 +2,21 @@
 
 A package for numbering equations only when they are referred to.
 
+
 ## Usage
+_This is not an official package._
 
-1. Import the package:
 
+1. Download the package:
+   Download and store the folder in {data-dir}/typst/packages/local
+   {data-dir} is
+    * $XDG_DATA_HOME or ~/.local/share on Linux
+    * ~/Library/Application Support on macOS
+    * %APPDATA% on Windows
+1. Import the package
+   ```
+   #import "@local/auto-ref-numbery:0.0.1": *
+   ```
 1. Apply the reference rule: 
     ```typst
     #show ref: it => eq_refstyle(it)
