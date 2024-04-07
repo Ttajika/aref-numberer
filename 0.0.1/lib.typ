@@ -51,6 +51,14 @@ else {return it}
    else {return it}
  }
 
+
+#let heading_supplement(it, supplement,thenumber,lang:"en") ={
+   if lang == "jp" and supplement in trans.at("jp").keys() {
+     return thenumber + trans.at("jp").at(supplement) 
+   }
+   else {return it}
+ }
+
 //modify reference 
 #let eq_refstyle(it,lang:"en") = {
   return  {
