@@ -5,9 +5,7 @@ A package for numbering equations only when they are referred to.
 ## Usage
 
 1. Import the package:
-    ```typst
-    #import "@preview/auto-ref-numbery:0.0.1: *"
-    ```
+
 1. Apply the reference rule: 
     ```typst
     #show ref: it => eq_refstyle(it)
