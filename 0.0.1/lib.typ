@@ -44,24 +44,29 @@ else {return it}
 //shorthand
 #let aeq = auto-numbering-equation
 
+#let heading_supplement(it, supplement,thenumber,lang:"en",dic:(en:(:))) ={
+   if lang == "jp" and supplement in dic.at("jp").keys() {
+     return thenumber + dic.at("jp").at(supplement) 
+   }
+   else {return it}
+ }
 
 //modify reference 
 #let eq_refstyle(it,lang:"en",dic:(en:(:))) = {
-  return  {
   let lbl = it.target
   let eq = math.equation
   let el = it.element
-  let eql = counter("tjk_auto-numbering-eq"+str(lbl))
-    eql.update(1)
     if el != none and el.func() == eq {
-    link(lbl)[
-    #numbering(
-      el.numbering,
-      ..counter(eq).at(el.location())
-    ) ]
+      let eql = counter("tjk_auto-numbering-eq"+str(lbl))
+      eql.update(1)
+      link(lbl)[
+      #numbering(
+        el.numbering,
+        ..counter(eq).at(el.location())
+      ) ]
   } else {
-    //translating other reference supplements
-    if el != none {
+    // Other references as usual.
+    if el != none and el.has("counter") {
       let c_eq = el.counter
      if el.supplement.text in dic.at(lang).keys(){
     link(lbl)[
@@ -69,11 +74,17 @@ else {return it}
       el.numbering,
       ..c_eq.at(el.location())
     )]
-    // Other references as usual.
   } else {it}
+  } else if it.element.func() == heading {
+    let thenumber = numbering(
+        el.numbering,
+        ..counter(heading).at(el.location())
+      )
+    link(lbl)[#heading_supplement(it, it.element.supplement.text, thenumber,lang:lang,dic:dic)
+    ]
   }
-  }}
-}
+    else {it}}
+  }
 
 
 
