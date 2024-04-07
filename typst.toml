@@ -1,0 +1,7 @@
+[package]
+name = "ref-numberer"
+version = "0.0.1"
+entrypoint = "lib.typ"
+authors = ["Tomoya Tajika"]
+license = "MIT"
+description = "A package for numbering equations only referenced"
