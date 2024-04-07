@@ -125,14 +125,16 @@ Default: plurals_dic
 `plurals_dic` is a predefined dictionary as follows:
 
 ```typst
-plurals_dic = ("Proposition": "Propositions", "Theorem":"Theorems",
+plurals_dic = (
+"Proposition": "Propositions", 
+"Theorem":"Theorems", 
 "Lemma":"Lemmata", 
 "Definition":"Definitions", 
 "Table":"Tables", 
 "Assumption":"Assumptions", 
 "Figure":"Figures", 
 "Example": "Examples", 
-"Fact":"Facts"
+"Fact":"Facts", 
 )
 ```
 
