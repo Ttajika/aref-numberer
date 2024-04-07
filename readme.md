@@ -16,7 +16,7 @@ _This is not an official package._
     * %APPDATA% on Windows
 1. Import the package
    ```
-   #import "@local/auto-ref-numbery:0.0.1": *
+   #import "@local/auto-ref-numbery-main:0.0.1": *
    ```
 1. Apply the reference rule: 
     ```typst
